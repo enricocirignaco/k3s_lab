@@ -1,6 +1,5 @@
-roles:
-  - name: update_debian
-    src: git@github.com:enricocirignaco/ansible.git
-    scm: git
-
-
+# ansible-galaxy collection install -r requirements.yml
+collections:
+  - name: git+https://github.com/enricocirignaco/ansible-homelab.git
+    type: git
+    version: main
