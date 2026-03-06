@@ -1,0 +1,6 @@
+roles:
+  - name: update_debian
+    src: git@github.com:enricocirignaco/ansible.git
+    scm: git
+
+
