@@ -10,7 +10,7 @@
     ansible_become_password: "{{ vault_bootstrap_ssh_password }}"
 
   roles:
-    - role: debian_bootstrap
+    - role: enricocirignaco.infrastructure.debian_bootstrap
       vars:
         debian_bootstrap_ansible_user: ansible
         debian_bootstrap_ansible_groups: ["sudo"]
