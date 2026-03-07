@@ -1,7 +1,7 @@
 ---
 # ansible-playbook playbooks/k3s.yaml --ask-vault-pass
 - name: Deploy K3s on Debian-based systems
-  hosts: cluster
+  hosts: test_nodes
   become: true
   gather_facts: true
   remote_user: ansible
@@ -13,6 +13,7 @@
         debian_update_reboot: false
     - role: enricocirignaco.infrastructure.common
       vars:
+        common_enable_cron: false
         common_install_tailscale: true
         common_base_packages:
           - curl
@@ -22,3 +23,8 @@
           - nano
         common_admin_authorized_keys:
           - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIELplGLTqSTT/ULTi4rcL2sQUBDGMgvSZJDUxmhzAoDZ enrico@k3s-lab"
+    - role: enricocirignaco.infrastructure.debian_hardening
+      vars:
+        debian_hardening_disable_services:
+          - bluetooth
+          - wpa_supplicant
