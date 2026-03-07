@@ -28,3 +28,7 @@
         debian_hardening_disable_services:
           - bluetooth
           - wpa_supplicant
+    - role: enricocirignaco.infrastructure.debian_network
+      vars:
+          method: dhcp
+          debian_network_interface: "eth0"
