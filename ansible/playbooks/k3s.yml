@@ -32,3 +32,4 @@
       vars:
           method: dhcp
           debian_network_interface: "eth0"
+    - role: enricocirignaco.radxa.rock_4b

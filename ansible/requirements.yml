@@ -4,3 +4,6 @@ collections:
   - name: git+https://github.com/enricocirignaco/ansible.git#/ansible_collections/enricocirignaco/infrastructure
     type: git
     version: main
+  - name: git+https://github.com/enricocirignaco/ansible.git#/ansible_collections/enricocirignaco/radxa
+    type: git
+    version: main
